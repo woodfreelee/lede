@@ -15,8 +15,8 @@ on:
       - master
   # schedule:
   #   - cron: 0 20 * * *
-  # release:
-  #   types: [published]
+   release:
+    types: [published]
 
 jobs:
 
@@ -177,7 +177,6 @@ jobs:
           # CONFIG_PACKAGE_luci-app-webadmin=y
           # CONFIG_PACKAGE_luci-app-wireguard=y
           # CONFIG_PACKAGE_luci-app-wrtbwmon=y
-          
             CONFIG_PACKAGE_luci-app-adbyby-plus=y
             CONFIG_PACKAGE_luci-app-arpbind=y
             CONFIG_PACKAGE_luci-app-autoreboot=y
@@ -190,13 +189,13 @@ jobs:
             CONFIG_PACKAGE_luci-app-sfe=y
             CONFIG_PACKAGE_luci-app-sqm=y
             CONFIG_PACKAGE_luci-app-ssr-plus=y
-           CONFIG_PACKAGE_luci-app-unblockmusic=y
-           CONFIG_PACKAGE_luci-app-upnp=y
-           CONFIG_PACKAGE_luci-app-vlmcsd=y
-           CONFIG_PACKAGE_luci-app-vsftpd=y
-           CONFIG_PACKAGE_luci-app-wol=y
-           CONFIG_PACKAGE_luci-app-zerotier=y
-           CONFIG_PACKAGE_opkg=y
+            CONFIG_PACKAGE_luci-app-unblockmusic=y
+            CONFIG_PACKAGE_luci-app-upnp=y
+            CONFIG_PACKAGE_luci-app-vlmcsd=y
+            CONFIG_PACKAGE_luci-app-vsftpd=y
+            CONFIG_PACKAGE_luci-app-wol=y
+            CONFIG_PACKAGE_luci-app-zerotier=y
+            CONFIG_PACKAGE_opkg=y
          EOF
 
           # LuCI主题:
