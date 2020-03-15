@@ -98,23 +98,23 @@ jobs:
 
           # 编译-k2p-固件:
            cat >> .config <<EOF
-          CONFIG_TARGET_BOARD="ramips"
-          CONFIG_TARGET_SUBTARGET="mt7621"
-          CONFIG_TARGET_PROFILE="Default"
-          CONFIG_TARGET_ARCH_PACKAGES="mipsel_24kc"
-          CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc"
+            CONFIG_TARGET_BOARD="ramips"
+            CONFIG_TARGET_SUBTARGET="mt7621"
+            CONFIG_TARGET_PROFILE="Default"
+            CONFIG_TARGET_ARCH_PACKAGES="mipsel_24kc"
+            CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc"
            EOF
 
           # 固件压缩:
            cat >> .config <<EOF
-           CONFIG_TARGET_IMAGES_GZIP=y
-           CONFIG_TARGET_ROOTFS_INITRAMFS=y
-           CONFIG_TARGET_INITRAMFS_COMPRESSION_LZMA=y
-           CONFIG_EXTERNAL_CPIO=""
-           CONFIG_TARGET_ROOTFS_SQUASHFS=y
-           CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=256
-           CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y
-           CONFIG_TARGET_UBIFS_JOURNAL_SIZE=""
+             CONFIG_TARGET_IMAGES_GZIP=y
+             CONFIG_TARGET_ROOTFS_INITRAMFS=y
+             CONFIG_TARGET_INITRAMFS_COMPRESSION_LZMA=y
+             CONFIG_EXTERNAL_CPIO=""
+             CONFIG_TARGET_ROOTFS_SQUASHFS=y
+             CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=256
+             CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y
+             CONFIG_TARGET_UBIFS_JOURNAL_SIZE=""
            EOF
 
              # 修改IP
@@ -157,21 +157,21 @@ jobs:
 
           # 常用LuCI插件选择:
           cat >> .config <<EOF
-          #CONFIG_PACKAGE_luci-app-adbyby-plus=y
+          # CONFIG_PACKAGE_luci-app-adbyby-plus=y
           # CONFIG_PACKAGE_luci-app-aria2=y
           # CONFIG_PACKAGE_luci-app-baidupcs-web=y
           # CONFIG_PACKAGE_luci-app-docker=y
-          #CONFIG_PACKAGE_luci-app-frpc=y
+          # CONFIG_PACKAGE_luci-app-frpc=y
           # CONFIG_PACKAGE_luci-app-kodexplorer=y
           # CONFIG_PACKAGE_luci-app-minidlna=y
           # CONFIG_PACKAGE_luci-app-openvpn=y
           # CONFIG_PACKAGE_luci-app-openvpn-server=y
           # CONFIG_PACKAGE_luci-app-qbittorrent=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
-          #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
-          #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
+          # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
           #  CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
-         CONFIG_PACKAGE_luci-app-ttyd=y
+            CONFIG_PACKAGE_luci-app-ttyd=y
          #  CONFIG_PACKAGE_luci-app-v2ray-server=y
           # CONFIG_PACKAGE_luci-app-verysync=y
           # CONFIG_PACKAGE_luci-app-webadmin=y
@@ -190,14 +190,13 @@ jobs:
             CONFIG_DEFAULT_luci-app-sfe=y
             CONFIG_DEFAULT_luci-app-sqm=y
             CONFIG_DEFAULT_luci-app-ssr-plus=y
-           CONFIG_DEFAULT_luci-app-unblockmusic=y
-           CONFIG_DEFAULT_luci-app-upnp=y
-           CONFIG_DEFAULT_luci-app-vlmcsd=y
-           CONFIG_DEFAULT_luci-app-vsftpd=y
-           CONFIG_DEFAULT_luci-app-wol=y
-           CONFIG_DEFAULT_luci-app-zerotier=y
-           CONFIG_DEFAULT_opkg=y
-     
+            CONFIG_DEFAULT_luci-app-unblockmusic=y
+            CONFIG_DEFAULT_luci-app-upnp=y
+            CONFIG_DEFAULT_luci-app-vlmcsd=y
+            CONFIG_DEFAULT_luci-app-vsftpd=y
+            CONFIG_DEFAULT_luci-app-wol=y
+            CONFIG_DEFAULT_luci-app-zerotier=y
+            CONFIG_DEFAULT_opkg=y
          EOF
 
           # LuCI主题:
@@ -211,11 +210,11 @@ jobs:
          cat >> .config <<EOF
           # CONFIG_PACKAGE_curl=y
           # CONFIG_PACKAGE_htop=y
-           CONFIG_PACKAGE_nano=y
+            CONFIG_PACKAGE_nano=y
           # CONFIG_PACKAGE_screen=y
           # CONFIG_PACKAGE_tree=y
           # CONFIG_PACKAGE_vim-fuller=y
-           CONFIG_PACKAGE_wget=y
+            CONFIG_PACKAGE_wget=y
          EOF
 
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
