@@ -61,7 +61,7 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: Config - n1 docker openwrt build config
+      - name: Config - k2p docker openwrt build config
         run: |
           [ -e k2p/diy.sh ] && mv k2p/diy.sh openwrt/diy.sh
           cp k2p/.config.k2p openwrt/.config
