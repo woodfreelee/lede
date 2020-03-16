@@ -13,13 +13,13 @@ on:
   push:
     branches: 
       - master
-    schedule:
-      - cron: 0 20 * * *
+    # schedule:
+    #  - cron: 0 20 * * *
     release:
       types: [published]
     paths:
       - '.config.k2p'
-      - 'n1/**'
+      - 'k2p/**'
 
 jobs:
 
