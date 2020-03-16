@@ -18,7 +18,6 @@ on:
     release:
       types: [published]
     paths:
-      - '.config.k2p.docker'
       - 'k2p/**'
 
 jobs:
@@ -64,7 +63,7 @@ jobs:
       - name: Config - k2p docker openwrt build config
         run: |
           [ -e k2p/diy.sh ] && mv k2p/diy.sh openwrt/diy.sh
-          cp k2p/.config.k2p.docker openwrt/.config
+          cp k2p/.config.k2p openwrt/.config
           cd openwrt
           [ -e diy.sh ] && chmod +x diy.sh && bash diy.sh
           make defconfig
