@@ -59,12 +59,12 @@ jobs:
           ./scripts/feeds install -a
 
        - name: Config - n1 docker openwrt build config
-      run: |
-        [ -e k2p/diy.sh ] && mv k2p/diy.sh openwrt/diy.sh
-        cp .config.k2p openwrt/.config
-        cd openwrt
-        [ -e diy.sh ] && chmod +x diy.sh && bash diy.sh
-        make defconfig
+         run: |
+           [ -e k2p/diy.sh ] && mv k2p/diy.sh openwrt/diy.sh
+           cp k2p/.config.k2p openwrt/.config
+           cd openwrt
+           [ -e diy.sh ] && chmod +x diy.sh && bash diy.sh
+           make defconfig
          
       - name: Make download
         run: |
