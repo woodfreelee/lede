@@ -18,8 +18,8 @@ on:
     paths:
       - '.config.k2p'
       - 'n1/**'
-  # release:
-  #   types: [published]
+    release:
+      types: [published]
 
 jobs:
 
