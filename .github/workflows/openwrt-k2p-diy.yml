@@ -10,16 +10,15 @@
 name: OpenWrt-CI
 
 on:
- # push:
- #  branches: 
-    #  - master
     release:
       types: [published]
     schedule:
       - cron: 0 20 * * 
-        
-    paths:
-      - './k2p.d/**'
+    push:
+      branches: 
+        - master
+      paths:
+        - './k2p.d/**'
 
 jobs:
 
