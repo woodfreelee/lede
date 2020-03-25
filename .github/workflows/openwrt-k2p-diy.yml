@@ -13,10 +13,11 @@ on:
  # push:
  #  branches: 
     #  - master
-  # release:
-    # types: [published]
-    # schedule:
-      # - cron: 0 20 * * 
+    release:
+      types: [published]
+    schedule:
+      - cron: 0 20 * * 
+        
     paths:
       - './k2p.d/**'
 
