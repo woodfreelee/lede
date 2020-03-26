@@ -14,7 +14,7 @@ on:
     branches: 
       - master
     paths:
-      - './k2p.d/**'
+      - 'k2p.d/**'
   release:
     types: [published]
     
