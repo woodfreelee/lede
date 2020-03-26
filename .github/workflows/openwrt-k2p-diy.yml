@@ -64,9 +64,8 @@ jobs:
 
       - name: Config - k2p docker openwrt build config
         run: |
-          [ -e k2p.d/diy.sh ] && mv k2p.d/diy.sh openwrt/diy.sh
-          cp k2p.d/k2p.config openwrt/.config
-          cd openwrt
+          cp ./k2p.d/k2p.config ./.config
+          cd /k2p.d
           [ -e diy.sh ] && chmod +x diy.sh && bash diy.sh
           make defconfig
 
