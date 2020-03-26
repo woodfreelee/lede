@@ -10,11 +10,16 @@
 name: OpenWrt-22
 
 on:
+  release:
+    types: [published]
+    
   push:
     branches: 
       - master
-  release:
-    types: [published]
+    paths:
+      - 'k2p.d/**'
+  
+
     
   # schedule:
     # - cron: 0 20 * * *
@@ -62,8 +67,8 @@ jobs:
 
       - name: Config - k2p docker openwrt build config
         run: |
-          [ -e ./k2p.d/diy.sh ] && mv ./k2p.d/diy.sh openwrt/diy.sh
-          cp ./k2p.d/k2p.config openwrt/.config
+          [ -e k2p.d/diy.sh ] && mv k2p.d/diy.sh openwrt/diy.sh
+          cp k2p.d/k2p.config openwrt/.config
           cd openwrt
           [ -e diy.sh ] && chmod +x diy.sh && bash diy.sh
           make defconfig
