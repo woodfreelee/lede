@@ -10,13 +10,15 @@
 name: OpenWrt-22
 
 on:
-  # push:
-    # branches: 
-      # - master
-    schedule:
-      - cron: 0 20 * * *
-    release:
-      types: [published]
+  push:
+    branches: 
+      - master
+  release:
+    types: [published]
+    
+  # schedule:
+    # - cron: 0 20 * * *
+  
     
 jobs:
 
