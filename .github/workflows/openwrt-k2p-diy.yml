@@ -66,7 +66,7 @@ jobs:
         run: |
           cp ./k2p.d/k2p.config ./.config
           cd ./k2p.d/
-          chmod +x ./k2p.d/diy.sh && bash diy.sh
+          bash diy.sh
           make defconfig
 
       - name: Make download
