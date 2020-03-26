@@ -10,8 +10,7 @@
 name: OpenWrt-22
 
 on:
-  schedule:
-    - cron: 0 20 * * 
+  
   push:
     branches: 
       - master
@@ -19,6 +18,8 @@ on:
       - './k2p.d/**'
   release:
     types: [published]
+  schedule:
+    - cron: 0 20 * * 
 
 jobs:
 
